@@ -5,43 +5,56 @@
 #include <stdint.h>
 
 
-typedef struct kded_renderer_ctx * kded_renderer_ctx_t;
+/* ----------------------------------------------------------------- Types -- */
 
 
-struct kded_renderable {
+typedef struct ed_renderer_ctx * ed_renderer_ctx_t;
+
+
+/* -------------------------------------------------------------- Lifetime -- */
+
+
+ed_renderer_ctx_t
+ed_renderer_create();
+
+
+int
+ed_renderer_destroy(
+        ed_renderer_ctx_t *ctx);
+
+
+/* ------------------------------------------------------------- Resources -- */
+
+
+uint64_t
+ed_renderer_load(
+        ed_renderer_ctx_t ctx,
+        const char *filename);
+
+
+/* ---------------------------------------------------------------- Render -- */
+
+
+struct ed_renderable {
         float world_mat[16];
         float aabb[6];
         uint64_t mesh_id;
 };
 
 
-struct kded_camera {
+struct ed_camera {
         float view_mat[16];
+        float cutoff_distance;
 };
 
 
-kded_renderer_ctx_t
-kded_renderer_create();
-
-
 int
-kded_renderer_destroy(
-        kded_renderer_ctx_t *ctx);
-
-
-int
-kded_renderer_load(
-        kded_renderer_ctx_t ctx,
-        const char *filename);
-
-
-int
-kded_renderer_render(
-        kded_renderer_ctx_t ctx,
-        struct kded_camera *camera,
-        struct kded_renderables *renderables,
+ed_renderer_render(
+        ed_renderer_ctx_t ctx,
+        struct ed_camera *camera,
+        struct ed_renderables *renderables,
         int renderables_count);
 
 
+/* inc guard */
 #endif
-

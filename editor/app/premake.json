@@ -1,0 +1,23 @@
+{
+        "projects" : [
+                {
+                        "name" : "editor-app",
+                        "kind" : "SharedLib",
+                        "language" : "C",
+
+                        "files": [
+                          "./**.json",
+                          "./**.h",
+                          "./**.c"
+                        ],
+
+                        "include_dirs" : [
+                                "./src"
+                        ],
+
+                        "dependencies" : [
+                                "karbon_drive"
+                        ]
+                }
+        ]
+}

@@ -1,0 +1,20 @@
+{
+        "projects" : [
+                {
+                        "name" : "editor-renderer",
+                        "kind" : "StaticLib",
+                        "language" : "C",
+
+                        "files": [
+                          "./**.json",
+                          "./**.h",
+                          "./**.c"
+                        ],
+
+                        "include_dirs" : [
+                                "./src",
+                                "../runtime/src/"
+                        ]
+                }
+        ]
+}
