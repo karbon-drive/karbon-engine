@@ -14,6 +14,16 @@ typedef struct ed_renderer_ctx * ed_renderer_ctx_t;
 /* -------------------------------------------------------------- Lifetime -- */
 
 
+typedef void*(*edr_alloc_fn)(unsigned);
+typedef void(*edr_free_fn)(void*);
+
+
+struct ed_renderer_desc {
+        edr_alloc_fn alloc_fn;
+        edr_free_fn free_fn;
+};
+
+
 ed_renderer_ctx_t
 ed_renderer_create();
 
