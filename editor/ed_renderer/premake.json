@@ -12,8 +12,8 @@
                         ],
 
                         "include_dirs" : [
-                                "./src",
-                                "../runtime/src/"
+                                "./include/",
+                                "./src/"
                         ]
                 }
         ]
