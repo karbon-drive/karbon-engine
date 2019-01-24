@@ -25,7 +25,8 @@ struct ed_renderer_desc {
 
 
 ed_renderer_ctx_t
-ed_renderer_create();
+ed_renderer_create(
+        struct ed_renderer_desc *desc);
 
 
 int
@@ -62,7 +63,7 @@ int
 ed_renderer_render(
         ed_renderer_ctx_t ctx,
         struct ed_camera *camera,
-        struct ed_renderables *renderables,
+        struct ed_renderable *renderables,
         int renderables_count);
 
 

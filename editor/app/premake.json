@@ -16,7 +16,8 @@
                         ],
 
                         "dependencies" : [
-                                "karbon_drive"
+                                "karbon_drive",
+                                "kd_editor_renderer"
                         ]
                 }
         ]

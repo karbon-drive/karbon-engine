@@ -1,7 +1,7 @@
 {
         "projects" : [
                 {
-                        "name" : "editor-renderer",
+                        "name" : "kd_editor_renderer",
                         "kind" : "StaticLib",
                         "language" : "C",
 
@@ -12,8 +12,11 @@
                         ],
 
                         "include_dirs" : [
-                                "./include/",
                                 "./src/"
+                        ],
+
+                        "include_dirs_public" : [
+                                "./include/"
                         ]
                 }
         ]

@@ -7,7 +7,8 @@
 
 
 ed_renderer_ctx_t
-ed_renderer_create()
+ed_renderer_create(
+        struct ed_renderer_desc *desc)
 {
         return 0;
 }
