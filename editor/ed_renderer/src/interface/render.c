@@ -13,5 +13,10 @@ ed_renderer_render(
         struct ed_renderable *renderables,
         int renderables_count)
 {
+        (void)ctx;
+        (void)camera;
+        (void)renderables;
+        (void)renderables_count;
+        
         return 0;
 }
