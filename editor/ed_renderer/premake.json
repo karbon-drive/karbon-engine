@@ -17,6 +17,10 @@
 
                         "include_dirs_public" : [
                                 "./include/"
+                        ],
+
+                        "links-windows" : [
+                                "opengl32.lib"
                         ]
                 }
         ]
