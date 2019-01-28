@@ -11,6 +11,15 @@
 typedef struct ed_renderer_ctx * ed_renderer_ctx_t;
 
 
+/* ------------------------------------------------------------------ Info -- */
+
+
+void
+ed_renderer_required_api_version_get(
+        int *major,
+        int *minor);
+
+
 /* -------------------------------------------------------------- Lifetime -- */
 
 

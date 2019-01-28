@@ -26,7 +26,10 @@ setup() {
         if (gl3wInit()) {
                 assert(!"FAILED TO INIT");
         }
-        assert(gl3wIsSupported(3, 2));
+
+        int major, minor;
+        ed_renderer_required_api_version_get(&major, &minor);
+        assert(gl3wIsSupported(major, minor));
 
         /* clear editor ctx */
         KD_MEMZERO(app_ctx);

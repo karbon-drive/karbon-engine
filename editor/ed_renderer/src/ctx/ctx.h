@@ -1,6 +1,8 @@
 #ifndef CTX_INCLUDED
 #define CTX_INCLUDED
 
+#include <stdint.h>
+
 
 struct ed_mesh {
         /* array */ float * mesh_data;
